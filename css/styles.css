@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 189, 93, 56;
+  --bs-primary-rgb: 78,145,253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -7660,9 +7660,9 @@ textarea.form-control-lg {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
+/*.mb-3 {*/
+/*  margin-bottom: 1rem !important;*/
+/*}*/
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
@@ -10968,5 +10968,69 @@ section.resume-section .resume-section-content {
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-tile {
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+}
+
+.project-tile:hover {
+  background: #e0e0e0;
+  transform: scale(1.02);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+}
+
+.project-description {
+  font-size: 1em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .project-tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-tile {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
